@@ -1,6 +1,9 @@
 package slidingpuzzle;
 
 import java.awt.FlowLayout;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 
@@ -15,11 +18,21 @@ public class SlidingPuzzle extends JApplet{
     @Override
     public void init() {
         setLayout(new FlowLayout());
+        
+        BufferedImage img;
         try {
-            board = new Board(5, 3, ImageIO.read(new URL(getCodeBase(), "eclipse-logo.png")));
+            img = ImageIO.read(new URL(getCodeBase(), "GithubLogo.png"));
         } catch (IOException e) {
         }
-        System.out.println(getCodeBase());
+        
+        board = new Board(3, 3, img);
+        
+        addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                
+            }
+        });
         
         add(board);
     }

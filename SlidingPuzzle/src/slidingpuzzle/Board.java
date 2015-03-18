@@ -3,6 +3,7 @@ package slidingpuzzle;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.event.MouseAdapter;
 import java.awt.image.BufferedImage;
 
 import javax.swing.BorderFactory;
@@ -37,6 +38,10 @@ public class Board extends JPanel{
             }
         }
         tiles[rows - 1][cols - 1] = null;
+        
+        addMouseListener(new MouseAdapter() {
+            
+        });
     }
     
     @Override
