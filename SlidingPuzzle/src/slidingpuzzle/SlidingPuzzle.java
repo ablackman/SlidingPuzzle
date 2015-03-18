@@ -19,9 +19,9 @@ public class SlidingPuzzle extends JApplet{
     public void init() {
         setLayout(new FlowLayout());
         
-        BufferedImage img;
+        BufferedImage img = null;
         try {
-            img = ImageIO.read(new URL(getCodeBase(), "GithubLogo.png"));
+            img = ImageIO.read(new URL(getCodeBase(), "slidingpuzzle/GithubLogo.png"));
         } catch (IOException e) {
         }
         

@@ -47,3 +47,4 @@ Temporary Items
 *.lock
 *.log
 version.ini
+.recommenders
